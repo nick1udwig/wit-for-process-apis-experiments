@@ -1,0 +1,55 @@
+package kinode:file-transfer-api@0.1.0;
+
+interface api {
+    // use standard.{address};
+
+    variant transfer-request {
+        list-files,
+        download(transfer-download),
+        progress(transfer-request-progress),
+    }
+
+    variant transfer-response {
+        list-files(list<file-info>),
+        download(transfer-download),
+        done,
+        started,
+    }
+
+    record file-info {
+        name: string,
+        size: u64,
+    }
+
+    variant worker-request {
+        initialize(worker-request-initialize),
+        chunk(worker-request-chunk),
+        size(u64),
+    }
+
+    record transfer-download {
+        name: string,
+        target: address,  // TODO
+    }
+
+    record transfer-request-progress {
+        name: string,
+        progress: u64,
+    }
+
+    record worker-request-initialize {
+        name: string,
+        target-worker: option<address>,  // TODO
+    }
+
+    record worker-request-chunk {
+        name: string,
+        offset: u64,
+        length: u64,
+    }
+}
+
+world file-transfer-api {
+    export api;
+    // import kinode:process/standard@0.7.0;
+}

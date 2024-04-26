@@ -1,0 +1,14 @@
+[
+    {
+        "process_name": "ft_composed",
+        "process_wasm_path": "/ft_composed.wasm",
+        "on_exit": "Restart",
+        "request_networking": true,
+        "request_capabilities": [
+            "http_server:distro:sys",
+            "vfs:distro:sys"
+        ],
+        "grant_capabilities": [],
+        "public": true
+    }
+]

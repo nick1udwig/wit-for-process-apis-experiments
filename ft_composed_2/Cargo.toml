@@ -1,0 +1,14 @@
+[workspace]
+resolver = "2"
+members = [
+    "ft_composed",
+    "worker",
+    "download",
+    "list_files",
+    "file_transfer_api",
+]
+
+[profile.release]
+panic = "abort"
+opt-level = "s"
+lto = true

@@ -1,0 +1,16 @@
+{
+    "name": "ft_composed",
+    "description": "",
+    "image": "",
+    "properties": {
+        "package_name": "ft_composed",
+        "current_version": "0.1.0",
+        "publisher": "template.os",
+        "mirrors": [],
+        "code_hashes": {
+            "0.1.0": ""
+        }
+    },
+    "external_url": "",
+    "animation_url": ""
+}
