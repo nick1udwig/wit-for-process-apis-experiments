@@ -1,0 +1,7 @@
+package kinode:process@0.7.0;
+
+world file-transfer {
+    //include file-transfer-api;
+    import api;
+    include process;
+}
